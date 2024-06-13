@@ -23,7 +23,7 @@
 <br />
 <button class="button" @onclick="ExecuteCode">Run</button>
 
-<p>@result</p>
+<p id="costDetails">@result</p>
 
 @code {
     private string code = string.Empty;
@@ -80,6 +80,12 @@
                     entry.Invoke(null, null);
 
                     result = sw.ToString();
+                    StateHasChanged();
+                }
+
+                if (!string.IsNullOrEmpty(result))
+                {
+                    await JSRuntime.InvokeVoidAsync("addStyles");
                 }
             }
         }

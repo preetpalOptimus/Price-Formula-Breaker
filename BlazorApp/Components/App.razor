@@ -25,109 +25,110 @@
                     const input4 = document.getElementById('input4')
 
                     input1.value = `(((((PRIJS + ((double)#1#) +
-        (bestelPartij.Fustcode == "FB" ? ((double)#2#) :
-           (bestelPartij.Fustcode == "HB" ? ((double)#3#) :
-           (bestelPartij.Fustcode == "QB" ? ((double)#4#) :
-           (bestelPartij.Fustcode == "5B" ? ((double)#5#) :
-           (bestelPartij.Fustcode == "8B" ? ((double)#6#) :
-           ((double)100)))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust) + (PRIJS *((double)#7#)))*|3|)
-        +
-        ((((double)|30|)+(((double)|15|)/(bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume)))*|3|))*((double)|33|)) +
-        ((double)|34|) +
-        (((double)|37|) + (((double)|40|)/((bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume)))) +
-        ((((double)|43|)/(bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume))+
-        (((bestelPartij.Fustcode == "FB" ? ((double)|20|) :
-           (bestelPartij.Fustcode == "HB" ? ((double)|21|) :
-           (bestelPartij.Fustcode == "QB" ? ((double)|22|) :
-           (bestelPartij.Fustcode == "5B" ? ((double)|22|) :
-           (bestelPartij.Fustcode == "8B" ? ((double)|22|) :
-           ((double)100))))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust)))+
-        (bestelPartij.Fustcode == "FB" ? ((double)|8|) :
-           (bestelPartij.Fustcode == "HB" ? ((double)|9|) :
-           (bestelPartij.Fustcode == "QB" ? ((double)|10|) :
-           (bestelPartij.Fustcode == "5B" ? ((double)|11|) :
-           (bestelPartij.Fustcode == "8B" ? ((double)|12|) :
-           ((double)100)))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust))*|26|`
+                (bestelPartij.Fustcode == "FB" ? ((double)#2#) :
+                   (bestelPartij.Fustcode == "HB" ? ((double)#3#) :
+                   (bestelPartij.Fustcode == "QB" ? ((double)#4#) :
+                   (bestelPartij.Fustcode == "5B" ? ((double)#5#) :
+                   (bestelPartij.Fustcode == "8B" ? ((double)#6#) :
+                   ((double)100)))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust) + (PRIJS *((double)#7#)))*|3|)
+                +
+                ((((double)|30|)+(((double)|15|)/(bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume)))*|3|))*((double)|33|)) +
+                ((double)|34|) +
+                (((double)|37|) + (((double)|40|)/((bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume)))) +
+                ((((double)|43|)/(bestelPartij.Volume == 0 ? 1 : bestelPartij.Volume))+
+                (((bestelPartij.Fustcode == "FB" ? ((double)|20|) :
+                   (bestelPartij.Fustcode == "HB" ? ((double)|21|) :
+                   (bestelPartij.Fustcode == "QB" ? ((double)|22|) :
+                   (bestelPartij.Fustcode == "5B" ? ((double)|22|) :
+                   (bestelPartij.Fustcode == "8B" ? ((double)|22|) :
+                   ((double)100))))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust)))+
+                (bestelPartij.Fustcode == "FB" ? ((double)|8|) :
+                   (bestelPartij.Fustcode == "HB" ? ((double)|9|) :
+                   (bestelPartij.Fustcode == "QB" ? ((double)|10|) :
+                   (bestelPartij.Fustcode == "5B" ? ((double)|11|) :
+                   (bestelPartij.Fustcode == "8B" ? ((double)|12|) :
+                   ((double)100)))))) /(bestelPartij.InhFust == 0 ? 1 : bestelPartij.InhFust))*|26|`
 
                     input2.value = `3	USD to GBP	0.943
-        4	GBP to GBP	1.000
-        5	EUR to GBP	0.892
-        6	Wreath/Capiro USD to GBP	0.833
-        7	USD to EUR	1.000
-        8	Transflor - FB	6.500
-        9	Transflor - HB	4.650
-        10	Transflor - QB	3.550
-        11	Transflor - 5B	3.550
-        12	Transflor - 8B	3.550
-        13	Transflor -Morrisons Alstro	2.000
-        14	Transflor - Capiro	2.750
-        15	Freight ECU	3.150
-        16	Freight COL	2.300
-        17	Peak Freight - ECU	3.950
-        18	Peak Freight - COL	2.700
-        19	Peak Freight - Ken	3.900
-        20	Inland Transport Ecu - FB	3.500
-        21	Inland Transport Ecu - HB	3.500
-        22	Inland Transport Ecu - QB	3.500
-        23	Inland Transport Col - FB	2.600
-        24	Inland Transport Col - HB	2.600
-        25	Inland Transport Col - QB	2.600
-        26	AM	1.010
-        27	Inland Transport Ken - FB	3.500
-        28	Inland Transport Ken - HB	1.750
-        29	Inland Transport Ken - QB	1.750
-        30	Freight Absolute - Ecu	0.005
-        31	Freight Absolute - Col	0.001
-        32	Freight Absolute - Ken	0.001
-        33	Duty Percentage	1.000
-        34	DEF/PEACH Absolute - Ecu	0.002
-        35	DEF/PEACH Absolute - Col	0.001
-        36	DEF/PEACH Absolute - Ken	0.003
-        37	Clearance Absolute - Ecu	0.002
-        38	Clearance Absolute - Col	0.002
-        39	Clearance Absolute - Ken	0.014
-        40	Clearance Per Kilo - Ecu	0.220
-        41	Clearance Per Kilo - Col	0.220
-        42	Clearance Per Kilo - Ken	0.220
-        43	Inland Transport Per Kilo - Ecu	0.001
-        44	Inland Transport Per Kilo - Col	0.050
-        45	Inland Transport Per Kilo - Ken
-        46	USD Rate for Wreaths & Capiro	0.833
-        47	Freight COL - Morrisons	2.100
-        48	Transflor Capiro -HB	3.500
-        49	Inland Capiro - HB	1.300
-        50	Inland Caprio - QB	1.300`
+                4	GBP to GBP	1.000
+                5	EUR to GBP	0.892
+                6	Wreath/Capiro USD to GBP	0.833
+                7	USD to EUR	1.000
+                8	Transflor - FB	6.500
+                9	Transflor - HB	4.650
+                10	Transflor - QB	3.550
+                11	Transflor - 5B	3.550
+                12	Transflor - 8B	3.550
+                13	Transflor -Morrisons Alstro	2.000
+                14	Transflor - Capiro	2.750
+                15	Freight ECU	3.150
+                16	Freight COL	2.300
+                17	Peak Freight - ECU	3.950
+                18	Peak Freight - COL	2.700
+                19	Peak Freight - Ken	3.900
+                20	Inland Transport Ecu - FB	3.500
+                21	Inland Transport Ecu - HB	3.500
+                22	Inland Transport Ecu - QB	3.500
+                23	Inland Transport Col - FB	2.600
+                24	Inland Transport Col - HB	2.600
+                25	Inland Transport Col - QB	2.600
+                26	AM	1.010
+                27	Inland Transport Ken - FB	3.500
+                28	Inland Transport Ken - HB	1.750
+                29	Inland Transport Ken - QB	1.750
+                30	Freight Absolute - Ecu	0.005
+                31	Freight Absolute - Col	0.001
+                32	Freight Absolute - Ken	0.001
+                33	Duty Percentage	1.000
+                34	DEF/PEACH Absolute - Ecu	0.002
+                35	DEF/PEACH Absolute - Col	0.001
+                36	DEF/PEACH Absolute - Ken	0.003
+                37	Clearance Absolute - Ecu	0.002
+                38	Clearance Absolute - Col	0.002
+                39	Clearance Absolute - Ken	0.014
+                40	Clearance Per Kilo - Ecu	0.220
+                41	Clearance Per Kilo - Col	0.220
+                42	Clearance Per Kilo - Ken	0.220
+                43	Inland Transport Per Kilo - Ecu	0.001
+                44	Inland Transport Per Kilo - Col	0.050
+                45	Inland Transport Per Kilo - Ken
+                46	USD Rate for Wreaths & Capiro	0.833
+                47	Freight COL - Morrisons	2.100
+                48	Transflor Capiro -HB	3.500
+                49	Inland Capiro - HB	1.300
+                50	Inland Caprio - QB	1.300`
 
                     input3.value = `1	Supplier - absolute
-        2	Supplier - per full box
-        3	Supplier - per half box
-        4	Supplier - per quarter box
-        5	Supplier - per fifth box
-        6	Supplier - per eighth box
-        7	Supplier - percentage
-        8	Freight - absolute	0.005
-        9	Freight - per kilo	2.85
-        10	Duty - percentage	1
-        11	DEF/PEA - absolute	0.002
-        12	Clearance - absolute	0.002
-        13	Clearance - per kilo	0.215
-        14	Transport (INLD) - per kilo	0.001
-        15	Transport (INLD) - per full box	7.5
-        16	Transport (INLD) - per half box	3.75
-        17	Transport (INLD) - per quarter box	1.875
-        18	Transport (INLD) - per fifth box	1.125
-        19	Transport (INLD) - per eighth box	1.125
-        20	Transport (CUST) - per full box	6.25
-        21	Transport (CUST) - per half box	4.65
-        22	Transport (CUST) - per quarter box	3.55
-        23	Transport (CUST) - per fifth box	3.55
-        24	Transport (CUST) - per eighth box	3.55`
+                2	Supplier - per full box
+                3	Supplier - per half box
+                4	Supplier - per quarter box
+                5	Supplier - per fifth box
+                6	Supplier - per eighth box
+                7	Supplier - percentage
+                8	Freight - absolute	0.005
+                9	Freight - per kilo	2.85
+                10	Duty - percentage	1
+                11	DEF/PEA - absolute	0.002
+                12	Clearance - absolute	0.002
+                13	Clearance - per kilo	0.215
+                14	Transport (INLD) - per kilo	0.001
+                15	Transport (INLD) - per full box	7.5
+                16	Transport (INLD) - per half box	3.75
+                17	Transport (INLD) - per quarter box	1.875
+                18	Transport (INLD) - per fifth box	1.125
+                19	Transport (INLD) - per eighth box	1.125
+                20	Transport (CUST) - per full box	6.25
+                21	Transport (CUST) - per half box	4.65
+                22	Transport (CUST) - per quarter box	3.55
+                23	Transport (CUST) - per fifth box	3.55
+                24	Transport (CUST) - per eighth box	3.55`
 
 
                     input4.value = `PRIJS	0.487
-        Fustcode	"QB"
-        InhFust	96
-        Volume	7`
+                Fustcode	"QB"
+                InhFust	96
+                Volume	7`
+
                     const dataString0 = input1.value
                     const dataString1 = input2.value
                     const dataString2 = input3.value
@@ -143,13 +144,13 @@
 
                       Console.WriteLine("Air Freight cost : "+ section1);
 
-                       Console.WriteLine("DEF/PEACH Absolute : "+ section2);
-   
-                       Console.WriteLine("Clearance cost : "+ section3);
-   
-                       Console.WriteLine("Inland Transport cost : "+ section4);
-   
-                       Console.WriteLine("Transflor cost : "+ section5);
+                        Console.WriteLine("DEF/PEACH Absolute : "+ section2);
+
+                        Console.WriteLine("Clearance cost : "+ section3);
+
+                        Console.WriteLine("Inland Transport cost : "+ section4);
+
+                        Console.WriteLine("Transflor cost : "+ section5);
 
                       Console.WriteLine("Total: " + (section1 + section2 + section3 + section4 + section5) * section6);`
 
@@ -264,6 +265,39 @@
                 }
             });
         };
+
+        function addStyles() {
+
+            setTimeout(function(){
+                // Select the <p> tag by its id
+                var costDetails = document.getElementById('costDetails');
+                // Split the text content by ';'
+                var segments = costDetails.innerHTML.split('\n');
+
+                // Clear the original content of <p>
+                costDetails.textContent = '';
+
+                // Iterate over each segment
+                segments.forEach(function (segment) {
+                    if (segment) {
+                        // Create a new <div> element for each segment
+                        var div = document.createElement('div');
+                        var newText = segment.trim().split(":");
+                        // Trim whitespace and add necessary styles
+                        div.innerHTML = `<b>${newText[0]}</b> : ${newText[1]}`;
+                        div.style.fontFamily = 'Courier New, monospace';
+                        div.style.fontSize = '14px';
+                        div.style.lineHeight = '1.6';
+                        div.style.marginBottom = '5px';
+
+                        // Append the <div> to the <p> tag
+                        costDetails.appendChild(div);
+                    }
+                });
+
+            }, 500)
+
+        }
     </script>
 </body>
 

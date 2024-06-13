@@ -8,13 +8,18 @@
 @using System.Threading.Tasks
 @inject IJSRuntime JSRuntime
 
-<h3>Execute C# Code</h3>
+<h3>Price Formula Breaker</h3>
+<br />
+<h4>Price Formula Code</h4>
 <textarea id="input1" class="input-textarea" placeholder="Price Formula Code" rows="5" cols="80"></textarea>
 <br />
+<h4>General Code Table</h4>
 <textarea id="input2" class="input-textarea" placeholder="General Code Table" rows="5" cols="80"></textarea>
 <br />
+<h4>Formula Code Table</h4>
 <textarea id="input3" class="input-textarea" placeholder="Formula Code Table" rows="5" cols="80"></textarea>
 <br />
+<h4>Flower Table</h4>
 <textarea id="input4" class="input-textarea" placeholder="Flower Table" rows="5" cols="80"></textarea>
 <br />
 <button class="button" @onclick="ProcessInputsAndGenerateCode">Process Inputs and Generate Code</button>

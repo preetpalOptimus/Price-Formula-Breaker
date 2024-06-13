@@ -8,25 +8,35 @@
 @using System.Threading.Tasks
 @inject IJSRuntime JSRuntime
 
-<h3>Price Formula Breaker</h3>
 <br />
-<h4>Price Formula Code</h4>
-<textarea id="input1" class="input-textarea" placeholder="Price Formula Code" rows="5" cols="80"></textarea>
+<div class="flex-container">
+    <div class="input-group">
+        <h4>Price Formula Code</h4>
+        <textarea id="input1" class="input-textarea" placeholder="Price Formula Code" rows="5" cols="80"></textarea>
+    </div>
+
+    <div class="input-group">
+        <h4>Flower Table</h4>
+        <textarea id="input4" class="input-textarea" placeholder="Flower Table" rows="5" cols="80"></textarea>
+    </div>
+</div>
+
+<div class="flex-container">
+    <div class="input-group">
+        <h4>General Code Table</h4>
+        <textarea id="input2" class="input-textarea" placeholder="General Code Table" rows="5" cols="80"></textarea>
+    </div> 
+
+    <div class="input-group">
+        <h4>Formula Code Table</h4>
+        <textarea id="input3" class="input-textarea" placeholder="Formula Code Table" rows="5" cols="80"></textarea>
+    </div>
+</div>
+<button class="button" @onclick="ProcessInputsAndGenerateCode">Run</button>
 <br />
-<h4>General Code Table</h4>
-<textarea id="input2" class="input-textarea" placeholder="General Code Table" rows="5" cols="80"></textarea>
+<textarea @bind="code" class="output-textarea" rows="10" cols="80" style="display: none;"></textarea>
 <br />
-<h4>Formula Code Table</h4>
-<textarea id="input3" class="input-textarea" placeholder="Formula Code Table" rows="5" cols="80"></textarea>
-<br />
-<h4>Flower Table</h4>
-<textarea id="input4" class="input-textarea" placeholder="Flower Table" rows="5" cols="80"></textarea>
-<br />
-<button class="button" @onclick="ProcessInputsAndGenerateCode">Process Inputs and Generate Code</button>
-<br />
-<textarea @bind="code" class="output-textarea" rows="10" cols="80"></textarea>
-<br />
-<button class="button" @onclick="ExecuteCode">Run</button>
+<button class="button" @onclick="ExecuteCode" style="display: none;">Run</button>
 
 <p id="costDetails">@result</p>
 
@@ -39,6 +49,8 @@
         // Call JavaScript function to process inputs and generate C# code
         code = await JSRuntime.InvokeAsync<string>("generateCSharpCodeFromInputs");
         StateHasChanged();
+
+        await ExecuteCode();
     }
 
     private async Task ExecuteCode()

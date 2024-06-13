@@ -60,7 +60,7 @@ h1:focus {
     text-align: center;
 }
 
-.input-textarea, .output-textarea {
+.output-textarea {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
@@ -70,9 +70,32 @@ h1:focus {
     font-size: 16px;
 }
 
-.input-textarea {
-    height: 100px;
+/* wwwroot/css/site.css */
+
+/* Flex container for side-by-side elements */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Adjust margin as needed */
 }
+
+/* Each input group within the flex container */
+.input-group {
+    flex: 1; /* Each group takes up equal space */
+    padding-right: 10px; /* Adjust padding between groups */
+}
+
+/* Style for the textareas */
+.input-textarea {
+    width: 100%; /* Full width of parent container */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    resize: vertical; /* Allow vertical resizing */
+}
+
 
 .output-textarea {
     height: 200px;

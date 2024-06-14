@@ -129,10 +129,10 @@
                 InhFust	96
                 Volume	13.714`
 
-                    const dataString0 = input1.value.trim()
-                    const dataString1 = input2.value.trim()
-                    const dataString2 = input3.value.trim()
-                    const datastring3 = input4.value.trim()
+                    const priceFormulaInput = input1.value.trim()
+                    const generalCodeInput = input2.value.trim()
+                    const formulaCodeInput = input3.value.trim()
+                    const flowerTableInput = input4.value.trim()
 
                     let firstPair;
                     let mainVariables = `double PRIJS = #PRIJS;
@@ -224,10 +224,12 @@
                     //#endregion
 
 
-                    let finalString = createCSharpCodeSection(dataString0)
-                    const parsedData = parseData(dataString1);
-                    const parsedData2 = parseData(dataString2);
-                    const parsedData3 = parseData(datastring3);
+                    let finalString = createCSharpCodeSection(priceFormulaInput)
+                    const parsedData = parseData(generalCodeInput);
+                    const parsedData2 = parseData(formulaCodeInput);
+                    const parsedData3 = parseData(flowerTableInput);
+
+                    console.log(parsedData3)
 
                     // Replace general codes
                     parsedData.forEach(generalCode => {
